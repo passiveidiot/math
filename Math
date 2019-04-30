@@ -1,1 +1,37 @@
-#include <stdio.h>#include <stdlib.h>#include <math.h> int main(void){ float a=0, b=0, c=0; puts("this program attempts to solve for x in a quadratic equation in the form\n\n\tax**2 + bx + c = 0\n\nYou will have to enter the values of a, b and c, as asked\n\nPlease, input the value of a:"); scanf("%f", &a); puts("Please, now input the value of b: "); scanf("%f", &b); puts("Lastly, please input the value of c: "); scanf("%f", &c); float delta = b * b - (4 * a * c); if(delta < 0 || a == 0) printf(
+Tutorialspoint 
+Search your favorite tutorials...
+  
+
+C++ Program to Solve any Linear Equation in One Variable
+C++ProgrammingServer Side Programming
+  Follow  Answer 1090  
+
+1 Answer
+Maheshwari Thakur
+Maheshwari Thakur
+Answered on 22nd Oct, 2018
+Any linear equation in one variable has the form aX + b = cX + d. Here the value of X is to be found, when the values of a, b, c, d are given.
+
+A program to solve a linear equation in one variable is as follows −
+
+Example
+Live Demo
+
+#include<iostream>
+using namespace std;
+int main() {
+   float a, b, c, d, X;
+   cout<<"The form of the linear equation in one variable is: aX + b = cX + d"<<endl;
+   cout<<"Enter the values of a, b, c, d : "<<endl;
+   cin>>a>>b>>c>>d;
+   cout<<"The equation is "<<a<<"X + "<<b<<" = "<<c<<"X + "<<d<<endl;
+   
+   if(a==c && b==d)
+      cout<<"There are infinite solutions possible for this equation"<<endl;
+   else if(a==c)
+      cout<<"This is a wrong equation"<<endl;
+   else {
+      X = (d-b)/(a-c);
+      cout<<"The value of X = "<< X <<endl;
+   }
+}
